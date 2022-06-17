@@ -1,0 +1,13 @@
+<div class="card text-center mb-3">
+            <div class="card-header">
+                {{ recipes.category.title }}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ recipe.title }}</h5>
+                <h5 class="card-title">{{ recipe.content | truncatewords:20}}</h5>
+                <a href="{{ recipe.get_absolute_url }}" class="btn btn-primary">Подробнее...</a>
+            </div>
+            <div class="card-footer text-muted">
+                        {{ article.created_at}}
+            </div>
+</div>

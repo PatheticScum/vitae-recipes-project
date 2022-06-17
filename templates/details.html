@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+
+{% block main %}
+
+<div class="card text-center mb-3">
+    <div class="card-header">
+        {{ recipes.category.title }}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{ recipes.title }}</h5>
+        <h5 class="card-title">{{ recipes.ingredients }}</h5>
+        <h5 class="card-title">{{ recipes.content | linebreaks}}</h5>
+        <a href="{% url 'index' %}" class="btn btn-primary">Главная страница</a>
+    </div>
+    <div class="card-footer text-muted">
+        {{ recipes.created_at}}
+    </div>
+</div>
+
+{% endblock main %}
+
+
